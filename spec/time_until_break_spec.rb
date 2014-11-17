@@ -12,4 +12,9 @@ describe TimeUntilBreak do
     expect(time.break_time).to eq "16:45:00"
   end
 
+  it 'can have a new break time set' do
+    time_two = TimeUntilBreak.new("14:30:00")
+    expect(time_two.break_time).to eq "14:30:00"
+  end
+
 end
