@@ -17,7 +17,7 @@ describe TimeUntilBreak do
     expect(time_two.break_time.strftime("%H:%M:%S")).to eq "14:30:00"
   end
 
-  it 'knows if the break has been yet' do
+  xit 'knows if the break has been yet' do
     expect(time.has_break_been?).to eq false
   end
 

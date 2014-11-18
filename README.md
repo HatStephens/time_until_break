@@ -1,6 +1,6 @@
 # TimeUntilBreak
 
-TODO: Write a gem description
+This gem was part of my exploration into building Ruby Gems and is my second gem. It is designed for students at Makers Academy and allows them to find out how long until the mandatory break from their command line.
 
 ## Installation
 
@@ -18,9 +18,9 @@ Or install it yourself as:
 
     $ gem install time_until_break
 
-## Usage
+## Usage (in command line)
 
-TODO: Write usage instructions here
+    $ time_until_break
 
 ## Contributing
 

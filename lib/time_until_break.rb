@@ -17,7 +17,7 @@ class TimeUntilBreak
     seconds = @break_time.to_i - current_time.to_i
     hours = (seconds/(60*60))
     minutes = ((seconds - (hours*60*60))/60)
-    %x(say "#{hours} hours, #{minutes} minutes")
+    say_something("#{hours} hours, #{minutes} minutes")
   end
 
   def has_break_been?
@@ -25,10 +25,14 @@ class TimeUntilBreak
   end
 
   def missed_break
-    %x(say "Sorry you missed the Mandatory Break.")
+    say_something("Sorry you missed the Mandatory Break.")
   end
 
   def current_time
     Time.now
+  end
+
+  def say_something(string)
+    %x(say "#{string}")
   end
 end
