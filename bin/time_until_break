@@ -4,4 +4,4 @@ require 'time_until_break'
 
 countdown = TimeUntilBreak.new
 
-countdown.message
+countdown.run_me

@@ -29,8 +29,18 @@ describe TimeUntilBreak do
 
   it 'can calculate how long until the next break in hours and minutes' do
     Delorean.time_travel_to(Time.utc(2014,11,17,10,36))
-    expect(time).to receive(:`).with('say "6 hours, 9 minutes"')
+    expect(time).to receive(:`).with('say "6 hours, 9 minutes until the Mandatory Break."')
     time.message
+  end
+
+  it 'knows if it is not the weekend' do
+    Delorean.time_travel_to(Time.utc(2014,11,21,10,36))
+    expect(time.is_it_the_weekend?).to be false
+  end
+
+  it 'knows if it is the weekend' do
+    Delorean.time_travel_to(Time.utc(2014,11,22,10,36))
+    expect(time.is_it_the_weekend?).to be true
   end
 
 end
